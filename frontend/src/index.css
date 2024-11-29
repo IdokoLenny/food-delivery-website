@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
 
 .header-bg{
     background-image: url("/header_img.png");
@@ -10,7 +13,7 @@
     position: relative;
 }
 .fade-in{
-    animation: fadeIn 3s;
+    animation: fadeIn 5s;
 }
 
 @keyframes fadeIn {
