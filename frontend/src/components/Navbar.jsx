@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {Link} from "react-router-dom"
 import { assets } from "../assets/frontend_assets/assets";
+import { StoreContext } from "../context/StoreContext";
 
 const Navbar = ({setShowLogin}) => {
 
   const [menu, setMenu] = useState("home")
+  const {getCartAmount} = useContext(StoreContext)
 
   return (
     <div className="w-[80%] mx-auto flex justify-between items-center py-2 font-outfit text-[#0B192C]">
@@ -19,7 +21,7 @@ const Navbar = ({setShowLogin}) => {
         <img src={assets.search_icon} alt="" className="w-[15px] sm:w-[20px]" />
         <div className="relative">
           <Link to="/cart"><img src={assets.basket_icon} alt="" className="w-[15px] sm:w-[20px]" /></Link> 
-          <div className="absolute min-w-[5px] min-h-[5px] sm:min-w-[8px] sm:min-h-[8px] bg-[#FF6500] border-[1px] rounded-[5px] top-[-8px] right-[-8px]">
+          <div className={getCartAmount() === 0 ? "" : "absolute min-w-[5px] min-h-[5px] sm:min-w-[8px] sm:min-h-[8px] bg-[#FF6500] border-[1px] rounded-[5px] top-[-8px] right-[-8px]"}>
             
           </div>
         </div>

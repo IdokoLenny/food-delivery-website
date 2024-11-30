@@ -74,7 +74,7 @@ const Footer = () => {
         </p>
         <button
           onClick={() => scrollToTop()}
-          id="scroll-to-top" class="absolute sm:right-[-10rem] sm:bottom-2 bottom-12 right-[-0.5rem] bg-gray-800 text-white rounded-full transition duration-300 hover:bg-gray-700 hover:text-gray-200"
+          id="scroll-to-top" className="absolute sm:right-[-10rem] sm:bottom-2 bottom-12 right-[-0.5rem] bg-gray-800 text-white rounded-full transition duration-300 hover:bg-gray-700 hover:text-gray-200"
         >
           <img
             src="https://media.geeksforgeeks.org/wp-content/uploads/20240227155250/up.png"
